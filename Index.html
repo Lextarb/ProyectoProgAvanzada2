@@ -3,12 +3,42 @@
 <head>
     <title >Proyecto Programacion 2
     </title>
- 
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    Hola
+    <header id="header">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+          <a class="navbar-brand" href="./index.html">Hotelitos</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrincipal"
+            aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarPrincipal">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a class="nav-link" href="javascript:;" onclick="modInicio();">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="javascript:;" onclick="modNosotros();">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="javascript:;" onclick="modGaleria();">Galeria</a></li>
+              <li class="nav-item"><a class="nav-link" href="javascript:;" onclick="modContacto();">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="javascript:;" onclick="modRegistro();">Registro</a></li>
+    
+            </ul>
+    
+          </div>
+    
+    
+        </nav>
+    
+      </header>
+
+
 </body>
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
 </html>
 
 
