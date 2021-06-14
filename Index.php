@@ -4,6 +4,7 @@
     <title >Proyecto Programacion 2
     </title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <?php require_once('msyql/conexion.php'); ?>
     
 </head>
 
