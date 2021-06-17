@@ -4,7 +4,6 @@
 // Include any default variable overrides here (though functions won't be available)
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-
 // Then add additional custom code here
 
 $forecolor:#000;
@@ -13,16 +12,9 @@ $forecolor:#000;
 $fondo-dark: #000;
 $forecolor-dark: #FFF;
 $bordes-dark: #CBCBCB;
-/*
-body{
-    &.dark{
-        background: $oscuro;
-        
-    }
-} 
 
 
-*/
+
 html{
 
     :is(p,h1,h2,h3,h4,h5,h6){
@@ -34,16 +26,14 @@ html{
         
         body{
             background: $fondo-dark;
-            div{
-                background: $fondo-dark;
-                border-color: $fondo-dark;
-                margin:$fondo-dark;
-            }
+            
         
         } 
         :is(p,h1,h2,h3,h4,h5,h6){
             color: $forecolor-dark;
         }
+        
+        
         
     }
     

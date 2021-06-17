@@ -11465,16 +11465,6 @@ fieldset:disabled .btn {
   }
 }
 
-/*
-body{
-    &.dark{
-        background: $oscuro;
-        
-    }
-} 
-
-
-*/
 html :is(p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
   color: #000;
 }
@@ -11485,12 +11475,6 @@ html.dark {
 
 html.dark body {
   background: #000;
-}
-
-html.dark body div {
-  background: #000;
-  border-color: #000;
-  margin: #000;
 }
 
 html.dark :is(p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {

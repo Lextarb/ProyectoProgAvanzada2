@@ -2,6 +2,7 @@ var root = document.getElementsByTagName('html')[0];
 const btnSwitch = document.querySelector('#switch');
 var miCookie = readCookie("Tema");
 
+
 function readCookie(name) {
 
   var nameEQ = name + "="; 
@@ -29,6 +30,7 @@ function readCookie(name) {
         }
         else{
             document.cookie ="Tema=oscuro";
+            
 
         }
     });

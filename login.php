@@ -47,7 +47,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 		}
 	}else{
 		// no existe el usuario
-		echo "Nombre de usuario o contraseña incorrecto";
+		echo"<script>alert('Nombre de usuario o contraseña incorrecto'); window.location= 'login.php'</script>";
 	}
 	
 
@@ -59,22 +59,27 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title >Iniciar Sesi&#243;on
+    <title >Iniciar Sesi&#243;n
     </title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/login.css">
+    
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/login.js"></script>
 </head>
 
-<body class="my-login-page">
-	<section class="h-100">
-		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
-				<div class="card-wrapper">
-					<div class="brand">
-						<img src="img/logo.jpg" alt="logo">
+<body>
+
+<div class="container">
+
+<br>
+	
+		<div class="d-flex flex-column justify-content-between" >
+			
+				<div class="card d-lg-flex">
+					<div class="card-img-top" >
+						<img src="img/logo.jpg" alt="logo" >
 					</div>
-					<div class="card fat">
+					
 						<div class="card-body">
 							<h4 class="card-title">Inicio de Sesi&#243;n</h4>
 							<form action="#" method="POST" class="my-login-validation">
@@ -102,18 +107,15 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 								</div>
 							</form>
 						</div>
-					</div>
-					<div class="footer">
-						Copyright &copy; 2021 &mdash; Dentista
-					</div>
+					
+					
 				</div>
-			</div>
+			
 		</div>
-	</section>
-
+	
+</div>
     
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
