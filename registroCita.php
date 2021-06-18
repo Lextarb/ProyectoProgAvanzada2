@@ -112,15 +112,19 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="registroCita.php"><p>Registrar Cita</p></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="logout.php"><p style="color:#3498DB">Cerrar Sesion</p></a>
+        </li>
         
         </ul>
+        
             <form class="d-flex">
               <button class="switch" id="switch">
                 <span><i class="fas fa-sun"></i></span>
                 <span><i class="fas fa-moon"></i></span>
               </button>
             </form>
-      </div>
+    </div>
   </div>
 </nav>
 
