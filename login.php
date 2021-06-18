@@ -35,7 +35,8 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	if($row == true){
 		$rol = $row[3];
 		$_SESSION['rol'] = $rol;
-		
+		$_SESSION['username'] = $username;
+
 		switch($rol){
 			case 1:
 				header('location: admin.php');
@@ -61,13 +62,44 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 <head>
     <title >Iniciar Sesi&#243;n
     </title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
     
 	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/login.js"></script>
+	
+	
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	
 </head>
 
 <body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/index.php"><p>Dentista</p></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php"><p>Inicio</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="registroCita.php"><p>Registrar Cita</p></a>
+        </li>
+        </ul>
+            <form class="d-flex">
+              <button class="switch" id="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+              </button>
+            </form>
+      
+      </div>
+  </div>
+</nav>
 
 <div class="container">
 
@@ -115,8 +147,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	
 </div>
     
-
-<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 </body>
 
 </html>

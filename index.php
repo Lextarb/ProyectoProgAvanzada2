@@ -1,3 +1,27 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['rol'])){
+        
+    }else{
+        if($_SESSION['rol'] == 0){
+            header('location: cliente.php');
+        }else if($_SESSION['rol'] == 1){
+          
+            header('location: admin.php');
+        }
+    }
+
+    if(isset($_GET['cerrar_sesion'])){
+        session_unset(); 
+    
+        // destroy the session 
+        session_destroy(); 
+        header('location: index.php');
+    }
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,24 +33,28 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="/index.php"><p>Dentista</p></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><p>Inicio</p></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php"><p>Inicio</p></a>
         </li>
         <li class="nav-item">
-            <button class="switch" id="switch">
+          <a class="nav-link " aria-current="page" href="registroCita.php"><p>Registrar Cita</p></a>
+        </li>
+        </ul>
+            <form class="d-flex">
+              <button class="switch" id="switch">
                 <span><i class="fas fa-sun"></i></span>
                 <span><i class="fas fa-moon"></i></span>
-            </button>
-        </li>
-      </ul>
+              </button>
+            </form>
+      
       </div>
   </div>
 </nav>
