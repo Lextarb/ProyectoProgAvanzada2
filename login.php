@@ -86,9 +86,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
       <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php"><p>Inicio</p></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="registroCita.php"><p>Registrar Cita</p></a>
-        </li>
+        
         </ul>
             <form class="d-flex">
               <button class="switch" id="switch">
@@ -113,7 +111,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 					</div>
 					
 						<div class="card-body">
-							<h4 class="card-title">Inicio de Sesi&#243;n</h4>
+							<h4 class="card-title" style="color: #000;">Inicio de Sesi&#243;n</h4>
 							<form action="#" method="POST" class="my-login-validation">
 								<div class="form-group">
 									<label >Cuenta</label><br>

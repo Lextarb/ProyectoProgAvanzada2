@@ -13,14 +13,14 @@ $fondo-dark: #000;
 $forecolor-dark: #FFF;
 $bordes-dark: #CBCBCB;
 
-
+$card-bg: $fondo-dark;
 
 html{
 
     :is(p,h1,h2,h3,h4,h5,h6){
         color: $forecolor;
     }
-
+    $card-bg: $fondo-dark;
     &.dark{
         background: $fondo-dark;
         

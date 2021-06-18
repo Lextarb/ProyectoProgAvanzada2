@@ -17,6 +17,14 @@
     <Precio>500</Precio>
   </libro>
   <libro>
+    <Nombre>Jesus Armando</Nombre>
+    <Correo>armando_saenz@live.com.mx</Correo>
+    <Telefono>2147483647</Telefono>
+    <Fecha>2021-06-24 21:55:00</Fecha>
+    <Servicio>Ortodoncia</Servicio>
+    <Precio>500</Precio>
+  </libro>
+  <libro>
     <Nombre>Grecia espinosa</Nombre>
     <Correo>Grecia@gmail.com</Correo>
     <Telefono>2147483647</Telefono>
@@ -31,13 +39,5 @@
     <Fecha>2021-07-20 00:00:00</Fecha>
     <Servicio>Consulta</Servicio>
     <Precio>100</Precio>
-  </libro>
-  <libro>
-    <Nombre>Jesus Armando</Nombre>
-    <Correo>armando_saenz@live.com.mx</Correo>
-    <Telefono>2147483647</Telefono>
-    <Fecha>2021-06-24 21:55:00</Fecha>
-    <Servicio>Ortodoncia</Servicio>
-    <Precio>500</Precio>
   </libro>
 </biblioteca>

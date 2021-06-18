@@ -101,8 +101,8 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="/index.php"><p>Dentista</p></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler  navbar-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -140,10 +140,10 @@
                 
                 
                     <div class="card-body">
-                        <h4>Registro de Cita</h4>
+                        <h3 style="color: #000;">Registro de Cita</h3>
                         <form method="POST" class="my-login-validation" novalidate="">
                             <div class="form-group">
-                                <label for="username"><p>Usuario(Tu cuenta)</p></label><br>
+                                <label for="username"><h6 style="color: #000;">Usuario(Tu cuenta)</h6></label><br>
                                 <input id="username" type="text" class="form-control" name="username" required autofocus value="<?php echo $_SESSION['username'] ?>" readonly>
                                 
                             </div>
@@ -163,7 +163,7 @@
                             
                             
                             <div class="form-group">
-                                <label for="fecha"><p>Fecha y Hora de la Cita</p></label><br>
+                                <label for="fecha"><h6 style="color: #000;">Fecha y Hora de la Cita</h6></label><br>
                                 
                                 
                                 <div class="input-group date datepicker" data-provide="datepicker" name="fecha">

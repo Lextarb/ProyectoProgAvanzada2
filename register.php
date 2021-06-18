@@ -31,24 +31,47 @@ if(isset($_POST['cuenta']) && isset($_POST['password']) && isset($_POST['name'])
 
 
 
-	$db = new Database();
-	$query = $db->connect()->prepare("CALL SP_agregarUsuario(:username,:password,:name,:email,:numero)");
-	$query->execute([':username' => $username, ':password' => $password, ':name' => $name, ':email' => $email, ':numero' => $numero]);
+	if(!empty($username) && !empty($password) && !empty($name)&& !empty($email) && !empty($numero))
+	{
+		if (filter_var($email, FILTER_VALIDATE_EMAIL))
+		{
+			echo "Esta dirección de correo ($email) es válida.";
+			$db = new Database();
+			$query = $db->connect()->prepare("CALL SP_agregarUsuario(:username,:password,:name,:email,:numero)");
+			$query->execute([':username' => $username, ':password' => $password, ':name' => $name, ':email' => $email, ':numero' => $numero]);
 
-	$row = $query->fetch(PDO::FETCH_NUM);
+			$row = $query->fetch(PDO::FETCH_NUM);
 	
-	if($row == true){
-		$rol = $row[0];
-		if($rol==0){
-			echo"<script>alert('El usuario ya existe'); window.location= 'register.php'</script>";
-		}else if($rol== 1){
-			echo"<script>alert('Se ha registrado con exito!'); window.location= 'register.php'</script>";
+			if($row == true)
+			{
+				$rol = $row[0];
+				if($rol==0)
+				{
+					echo"<script>alert('El usuario ya existe'); window.location= 'register.php'</script>";
+				}else if($rol== 1)
+				{
+				echo"<script>alert('Se ha registrado con exito!'); window.location= 'register.php'</script>";
+				}
+		
+		
+			}else
+			{
+				// no existe el usuario
+				echo "<script>alert('Error!');</script>";
+			}
 		}
+		else
+		{
+			//echo "<script>alert('Error!Esta dirección de correo ($email) no es válida.');</script>";
+			echo "Esta dirección de correo ($email) no es válida.";
+		}
+
 		
+	}
+	else
+	{
+		echo 'Llene todos los campos';
 		
-	}else{
-		// no existe el usuario
-		echo "</script>Error</script>";
 	}
 	
 
@@ -82,9 +105,7 @@ if(isset($_POST['cuenta']) && isset($_POST['password']) && isset($_POST['name'])
       <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php"><p>Inicio</p></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="registroCita.php"><p>Registrar Cita</p></a>
-        </li>
+        
         </ul>
             <form class="d-flex">
               <button class="switch" id="switch">
@@ -111,7 +132,7 @@ if(isset($_POST['cuenta']) && isset($_POST['password']) && isset($_POST['name'])
 					</div>
 					
 						<div class="card-body">
-							<h4 class="card-title">Registro</h4>
+							<h4 class="card-title" style="color: #000;">Registro</h4>
 							<form method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="name">Nombre</label><br>

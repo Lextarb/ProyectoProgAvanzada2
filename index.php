@@ -44,9 +44,7 @@
       <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php"><p>Inicio</p></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="registroCita.php"><p>Registrar Cita</p></a>
-        </li>
+        
         </ul>
             <form class="d-flex">
               <button class="switch" id="switch">
