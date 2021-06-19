@@ -25,7 +25,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title >Proyecto Programacion 2
+    <title >Proyecto  Programacion 2
     </title>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
